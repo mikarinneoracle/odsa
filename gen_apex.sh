@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export conn=pricing_tp
+export conn=pricing_high
 export pwd=WelcomeFolks123#!
 export schema=PRICEADMIN
 export wsname=PRICEADMIN
