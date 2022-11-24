@@ -1,5 +1,5 @@
 var data = { free: { price : {}, options : {} }, pro: { price : {}, options : {} }, enterprise: { price : {}, options : {} } };
-var url = '${URL}';
+var url = 'https://ga7358bee12ec49-pricing.adb.uk-london-1.oraclecloudapps.com/ords/priceadmin';
 
 var pricing = new Vue({
   el: '#pricing',
