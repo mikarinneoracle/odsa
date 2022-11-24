@@ -1,13 +1,13 @@
 #!/bin/bash
 
-export conn=pricing_high
+export conn=pricing_tp
 export pwd=WelcomeFolks123#!
 export schema=PRICEADMIN
 export wsname=PRICEADMIN
 export application_id=100
 export tables_to_copy=Y
 
-printf "set cloudconfig ./network/admin/wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd.sql
+printf "set cloudconfig ./network/admin/Wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd.sql
 printf "create user ${schema} identified by \"${pwd}\"\n/\n" >> upd.sql
 printf "GRANT CONNECT, CREATE SESSION, CREATE CLUSTER, CREATE DIMENSION, CREATE INDEXTYPE, CREATE JOB, CREATE MATERIALIZED VIEW, CREATE OPERATOR, CREATE PROCEDURE, CREATE SEQUENCE, CREATE SYNONYM, CREATE TABLE, CREATE TRIGGER, CREATE TYPE, CREATE VIEW to ${schema};\n" >> upd.sql
 printf "ALTER USER ${schema} quota unlimited on DATA;\n/\n" >> upd.sql
