@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+  <include file="table/options_table.xml"/> 
+  <include file="table/price_table.xml"/> 
+  <include file="ref_constraint/options_fk_ref_constraint.xml"/> 
+  <include file="index/price_con_tier_unique_index.xml"/> 
+</databaseChangeLog> 

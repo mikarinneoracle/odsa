@@ -1,0 +1,61 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <changeSet author="mika_rinne (generated)" id="1666685403476-2">
+        <insert tableName="PRICE">
+            <column name="ID" valueNumeric="2"/>
+            <column name="TIER" value="FREE"/>
+            <column name="PRICE_MO" valueNumeric="0"/>
+            <column name="USERS" valueNumeric="10"/>
+            <column name="STORAGE" valueNumeric="2"/>
+            <column name="SUPPORT" value="Email support"/>
+        </insert>
+        <insert tableName="PRICE">
+            <column name="ID" valueNumeric="3"/>
+            <column name="TIER" value="PRO"/>
+            <column name="PRICE_MO" valueNumeric="15"/>
+            <column name="USERS" valueNumeric="20"/>
+            <column name="STORAGE" valueNumeric="10"/>
+            <column name="SUPPORT" value="Priority email support"/>
+        </insert>
+        <insert tableName="PRICE">
+            <column name="ID" valueNumeric="4"/>
+            <column name="TIER" value="ENTERPRISE"/>
+            <column name="PRICE_MO" valueNumeric="29"/>
+            <column name="USERS" valueNumeric="30"/>
+            <column name="STORAGE" valueNumeric="15"/>
+            <column name="SUPPORT" value="Phone and email support"/>
+        </insert>
+    </changeSet>
+    <changeSet author="mika_rinne (generated)" id="1666685403476-1">
+        <insert tableName="OPTIONS">
+            <column name="ID" valueNumeric="21"/>
+            <column name="TIER" value="FREE"/>
+            <column name="ISPUBLIC" value="Y"/>
+            <column name="ISPRIVATE" value="N"/>
+            <column name="ISPERMISSIONS" value="Y"/>
+            <column name="ISSHARING" value="N"/>
+            <column name="ISUNLIMITED" value="N"/>
+            <column name="ISEXTRASEC" value="N"/>
+        </insert>
+        <insert tableName="OPTIONS">
+            <column name="ID" valueNumeric="23"/>
+            <column name="TIER" value="PRO"/>
+            <column name="ISPUBLIC" value="Y"/>
+            <column name="ISPRIVATE" value="Y"/>
+            <column name="ISPERMISSIONS" value="Y"/>
+            <column name="ISSHARING" value="Y"/>
+            <column name="ISUNLIMITED" value="Y"/>
+            <column name="ISEXTRASEC" value="N"/>
+        </insert>
+        <insert tableName="OPTIONS">
+            <column name="ID" valueNumeric="24"/>
+            <column name="TIER" value="ENTERPRISE"/>
+            <column name="ISPUBLIC" value="Y"/>
+            <column name="ISPRIVATE" value="Y"/>
+            <column name="ISPERMISSIONS" value="Y"/>
+            <column name="ISSHARING" value="Y"/>
+            <column name="ISUNLIMITED" value="Y"/>
+            <column name="ISEXTRASEC" value="Y"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
