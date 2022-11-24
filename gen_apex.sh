@@ -1,5 +1,6 @@
 #!/bin/bash
-
+export PATH=./jdk-11.0.16/bin:$PATH
+export JAVA_HOME=./jdk-11.0.16
 export conn=pricing_high
 export pwd=WelcomeFolks123#!
 export schema=PRICEADMIN
@@ -42,7 +43,7 @@ printf "\ntables\nexit" >> upd.sql
 ./sqlcl/bin/sql /nolog @./upd.sql
 
 if [ -n "${wsname}" ]; then
-    printf "set cloudconfig ./network/admin/wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd_apex.sql
+    printf "set cloudconfig ./network/admin/Wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd_apex.sql
     printf "begin\n" >> upd_apex.sql
     printf "    for c1 in (select privilege\n" >> upd_apex.sql
     printf "             from sys.dba_sys_privs\n" >> upd_apex.sql
@@ -88,7 +89,7 @@ if [ -n "${application_id}" ]; then
         printf "APEX_UTIL.PAUSE(2);\n" >> upd_apex_privs.sql;
         printf "end;\n/\n" >> upd_apex_privs.sql;
 
-        printf "set cloudconfig ./network/admin/wallet.zip\nconn ${schema}/${pwd}@${conn}\n@upd_apex_privs.sql\nlb update -changelog f${application_id}.xml\nexit" > upd_apex.sql
+        printf "set cloudconfig ./network/admin/Wallet.zip\nconn ${schema}/${pwd}@${conn}\n@upd_apex_privs.sql\nlb update -changelog f${application_id}.xml\nexit" > upd_apex.sql
         
         ./sqlcl/bin/sql /nolog @./upd_apex.sql
     else
