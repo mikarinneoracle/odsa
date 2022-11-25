@@ -1,10 +1,6 @@
 // ######## configs for ords and apex ########
-
 var url = 'ORDS_URL';
-
 var apex = 'APEX_URL';
-
-// ###########################################
 
 var data = { apex: {}, free: { price : {}, options : {} }, pro: { price : {}, options : {} }, enterprise: { price : {}, options : {} } };
 
