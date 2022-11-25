@@ -1,6 +1,12 @@
-var data = { apex: {}, free: { price : {}, options : {} }, pro: { price : {}, options : {} }, enterprise: { price : {}, options : {} } };
+// ######## configs for ords and apex ########
+
 var url = 'https://ga7358bee12ec49-pricing.adb.uk-london-1.oraclecloudapps.com/ords/priceadmin';
+
 var apex = 'https://ga7358bee12ec49-pricing.adb.uk-london-1.oraclecloudapps.com/ords/r/priceadmin/price-admin/login';
+
+// ###########################################
+
+var data = { apex: {}, free: { price : {}, options : {} }, pro: { price : {}, options : {} }, enterprise: { price : {}, options : {} } };
 
 var pricing = new Vue({
   el: '#pricing',
