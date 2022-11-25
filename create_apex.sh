@@ -6,7 +6,6 @@ export pwd=WelcomeFolks123#!
 export schema=PRICEADMIN
 export wsname=PRICEADMIN
 export application_id=100
-export tables_to_copy=Y
 
 printf "set cloudconfig ./network/admin/Wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd.sql
 printf "create user ${schema} identified by \"${pwd}\"\n/\n" >> upd.sql
@@ -25,19 +24,17 @@ else
     echo "Ords-rest_schema not found. ORDS schema not copied to ${schema}."
 fi
 
-if [ "${tables_to_copy}" == "Y" ]; then
-    echo "Copying tables data to ${schema}."
-    if [ -f "data.xml" ]; then
-           printf "lb update -changelog data.xml\n" >> upd.sql
-    fi
-
-    for filename in data*.xml; do
-        [ -e "$filename" ] || continue
-        if [ $filename != "data.xml" ]; then
-           printf "lb update -changelog ${filename}\n" >> upd.sql
-        fi
-    done
+echo "Copying tables data to ${schema}."
+if [ -f "data.xml" ]; then
+       printf "lb update -changelog data.xml\n" >> upd.sql
 fi
+
+for filename in data*.xml; do
+    [ -e "$filename" ] || continue
+    if [ $filename != "data.xml" ]; then
+       printf "lb update -changelog ${filename}\n" >> upd.sql
+    fi
+done
 
 printf "\ntables\nexit" >> upd.sql
 ./sqlcl/bin/sql /nolog @./upd.sql
