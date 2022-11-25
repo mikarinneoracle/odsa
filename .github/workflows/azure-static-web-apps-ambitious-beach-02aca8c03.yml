@@ -21,7 +21,8 @@ jobs:
       
       - run: |
           ls
-          echo ${{ secrets.ORDS_URL }}
+          echo "ORDS_URL : ${{ secrets.ORDS_URL }}"
+          echo "ORDS_URL : $ORDS_URL"
           
       - name: Build And Deploy
         id: builddeploy
