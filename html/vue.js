@@ -1,8 +1,8 @@
 // ######## configs for ords and apex ########
 
-var url = 'https://ga7358bee12ec49-pricing.adb.uk-london-1.oraclecloudapps.com/ords/priceadmin';
+var url = 'ORDS_URL';
 
-var apex = 'https://ga7358bee12ec49-pricing.adb.uk-london-1.oraclecloudapps.com/ords/r/priceadmin/price-admin/login';
+var apex = 'APEX_URL';
 
 // ###########################################
 

@@ -20,9 +20,9 @@ jobs:
           submodules: true
       
       - run: |
-          ls
-          echo "ORDS_URL : ${{ secrets.ORDS_URL }}"
-          echo "ORDS_URL : $ORDS_URL"
+          sed -i "s/ORDS_URL/${{ secrets.ORDS_URL }}/g" vue.js
+          sed -i "s/APEX_URL/${{ secrets.APEX_URL }}/g" vue.js
+          cat vue.js
           
       - name: Build And Deploy
         id: builddeploy
