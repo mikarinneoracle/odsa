@@ -96,11 +96,3 @@ if [ -n "${application_id}" ]; then
         echo "${application_id} not found. Not copied to Dev${task_id} ${schema}."
     fi
 fi
-
-cd network/admin
-unzip -q Wallet.zip
-export apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
-export ords=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/priceadmin")
-
-echo "APEX URL: ${apex}"
-echo "ORDS URL: ${ords}"
