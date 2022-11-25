@@ -19,7 +19,7 @@ jobs:
         with:
           submodules: true
       
-      - bash: |
+      - run: |
           echo Hello
           
       - name: Build And Deploy
