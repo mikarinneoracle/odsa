@@ -20,6 +20,7 @@ jobs:
           submodules: true
       
       - run: |
+          ls
           cd html
           ls
           sed -i "s|ORDS_URL|${{ secrets.ORDS_URL }}|g" vue.js
