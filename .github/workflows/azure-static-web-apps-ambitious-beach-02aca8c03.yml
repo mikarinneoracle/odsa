@@ -19,7 +19,8 @@ jobs:
         with:
           submodules: true
       - bash: |
-        env
+        echo "Hello"
+        ls
         echo {{ secrets.ORDS_URL }}
       - name: Build And Deploy
         id: builddeploy
