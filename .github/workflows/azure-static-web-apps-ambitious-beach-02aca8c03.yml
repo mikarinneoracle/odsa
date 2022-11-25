@@ -32,6 +32,7 @@ jobs:
           sh create_apex.sh
           cd network/admin
           unzip -q Wallet.zip
+          export dbname=${{ secrets.DBNAME }}
           export region=${{ secrets.REGION }}
           export apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
           export ords=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/priceadmin")
