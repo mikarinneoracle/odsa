@@ -16,7 +16,7 @@ jobs:
     name: Build and Deploy Job
     steps:
       - bash: |
-        echo Hello
+          echo Hello
       - uses: actions/checkout@v2
         with:
           submodules: true
