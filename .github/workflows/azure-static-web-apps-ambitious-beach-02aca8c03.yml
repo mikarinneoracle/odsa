@@ -20,7 +20,8 @@ jobs:
           submodules: true
       
       - run: |
-          echo Hello
+          ls
+          echo ${{ secrets.ORDS_URL }}
           
       - name: Build And Deploy
         id: builddeploy
