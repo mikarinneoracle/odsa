@@ -99,8 +99,8 @@ fi
 
 cd network/admin
 unzip -q Wallet.zip
-export apex=$(grep -oP '(?<=service_name=)[^_]*' ./network/admin/tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
-export ords=$(grep -oP '(?<=service_name=)[^_]*' ./network/admin/tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/priceadmin")
+export apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
+export ords=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/priceadmin")
 
 echo "APEX URL: ${apex}"
 echo "ORDS URL: ${ords}"
