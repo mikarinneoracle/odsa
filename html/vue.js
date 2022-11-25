@@ -7,8 +7,8 @@ var pricing = new Vue({
   data: { data },
   mounted () {
     console.log("ords: " + url);
-    data.apex = apex;
-    console.log("apex: " + data.apex);
+    data.apex.url = apex;
+    console.log("apex: " + data.apex.url);
     data.free = { price : {}, options : {} }
     data.pro = { price : {}, options : {} }
     data.enterprise = { price : {}, options : {} }
