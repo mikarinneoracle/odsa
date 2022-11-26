@@ -6,7 +6,7 @@ export application_id=100
 printf "set cloudconfig ./network/admin/Wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd.sql
 printf "create user ${schema} identified by \"${pwd}\"\n/\n" >> upd.sql
 printf "GRANT CONNECT, CREATE SESSION, CREATE CLUSTER, CREATE DIMENSION, CREATE INDEXTYPE, CREATE JOB, CREATE MATERIALIZED VIEW, CREATE OPERATOR, CREATE PROCEDURE, CREATE SEQUENCE, CREATE SYNONYM, CREATE TABLE, CREATE TRIGGER, CREATE TYPE, CREATE VIEW to ${schema};\n" >> upd.sql
-printf "ALTER USER ${schema} quota unlimted on DATA;\n/\n" >> upd.sql
+printf "ALTER USER ${schema} quota 1M on DATA;\n/\n" >> upd.sql
 printf "conn ${schema}/${pwd}@${conn}\n" >> upd.sql
 if [ -f "controller.xml" ]; then
    printf "lb update -changelog controller.xml\n" >> upd.sql
