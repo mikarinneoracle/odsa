@@ -22,7 +22,6 @@ jobs:
       - run: |
           export dbname=${{ secrets.DBNAME }}
           export region=${{ secrets.REGION }}
-          export dbname=${{ secrets.REGION }}
           export conn=${{ secrets.DBNAME }}_tp
           export pwd=${{ secrets.PASSWORD }}
           export schema=${{ secrets.SCHEMA }}
