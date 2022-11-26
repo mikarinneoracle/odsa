@@ -20,6 +20,14 @@ jobs:
           submodules: true
       
       - run: |
+          export dbname=${{ secrets.DBNAME }}
+          export region=${{ secrets.REGION }}
+          export dbname=${{ secrets.REGION }}
+          export conn=${{ secrets.DBNAME }}_tp
+          export pwd=${{ secrets.PASSWORD }}
+          export schema=${{ secrets.SCHEMA }}
+          export wsname=${{ secrets.SCHEMA }}
+          export application_id=100
           mkdir -p ./network/admin
           wget https://pricingodsa.blob.core.windows.net/wallet/Wallet.zip
           mv Wallet.zip ./network/admin/
@@ -32,8 +40,6 @@ jobs:
           sh create_apex.sh
           cd network/admin
           unzip -q Wallet.zip
-          export dbname=${{ secrets.DBNAME }}
-          export region=${{ secrets.REGION }}
           export apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
           export ords=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${dbname}.adb.${region}.oraclecloudapps.com/ords/priceadmin")
           echo "APEX URL: ${apex}"

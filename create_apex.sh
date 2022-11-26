@@ -1,11 +1,4 @@
 #!/bin/bash
-export region=uk-london-1
-export dbname=pricing
-export conn=pricing_high
-export pwd=WelcomeFolks123#!
-export schema=PRICEADMIN
-export wsname=PRICEADMIN
-export application_id=100
 
 printf "set cloudconfig ./network/admin/Wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd_apex.sql
 printf "begin\n" >> upd_apex.sql
