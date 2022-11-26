@@ -24,8 +24,7 @@ jobs:
           export region=${{ secrets.REGION }}
           export conn=${{ secrets.DBNAME }}_tp
           export pwd=${{ secrets.PASSWORD }}
-          #wget "${{ secrets.SAS }}" -O Wallet.zip
-          wget "https://pricingodsa.blob.core.windows.net/wallet-private/Wallet.zip?sp=r&st=2022-11-26T08:23:00Z&se=2023-11-26T16:23:00Z&spr=https&sv=2021-06-08&sr=b&sig=W4kL6mb0k2V23WiZ5E5DF1lBZCP0b79cwbUosR7jcUc%3D" -k -O Wallet.zip
+          wget ${{ secrets.SAS }} -O Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
           wget https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/BydeV7ct283Y4F2S9PECPEyeNI-U3xoaghdLQ0EuzNUEDIMoieyqu5uA7xJ-syyq/n/frsxwtjslf35/b/oracledb/o/jdk-11.0.16_linux-x64_bin.tar.gz -q
