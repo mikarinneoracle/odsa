@@ -24,7 +24,7 @@ jobs:
           export region=${{ secrets.REGION }}
           export conn=${{ secrets.DBNAME }}_tp
           export pwd=${{ secrets.PASSWORD }}
-          wget ${{ secrets.BUCKET }}/Wallet.zip
+          wget "${{ secrets.SAS }}" -O Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
           wget https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/BydeV7ct283Y4F2S9PECPEyeNI-U3xoaghdLQ0EuzNUEDIMoieyqu5uA7xJ-syyq/n/frsxwtjslf35/b/oracledb/o/jdk-11.0.16_linux-x64_bin.tar.gz -q
