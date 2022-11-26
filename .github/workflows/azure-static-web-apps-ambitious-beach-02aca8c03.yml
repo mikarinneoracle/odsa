@@ -24,9 +24,6 @@ jobs:
           export region=${{ secrets.REGION }}
           export conn=${{ secrets.DBNAME }}_tp
           export pwd=${{ secrets.PASSWORD }}
-          export schema=${{ secrets.SCHEMA }}
-          export wsname=${{ secrets.SCHEMA }}
-          export application_id=100
           wget ${{ secrets.BUCKET }}/Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
