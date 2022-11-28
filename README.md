@@ -31,8 +31,7 @@
 </ul>
 
 <p>
-After committing the <code>workflow yaml</code> change GitHub Azure actions will automatically build and deploy (CI/CD) the Azure Static Web app from gitHub source.
-<br>
+After committing and pushing the <code>workflow yaml</code> change (use <code>-f</code> option for the <code>git add</code>) GitHub Azure actions will automatically build and deploy (CI/CD) the Azure Static Web app from gitHub source.
 Part of the CI/CD is the Liquibase that will create ODSA <code>PRICEADMIN</code>Schema, add data to it, 
 then create ORDS REST services and finally create the APEX sample app for administration.
 
