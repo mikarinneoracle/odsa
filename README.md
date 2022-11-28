@@ -12,7 +12,7 @@
 <ul>
     <li>Select <code>BYOL</code> or <code>License included</code> as billing model depending on your case</li>
     <li>Use suitable Azure cloud <code>region</code> e.g. UK-South</li>
-    <li>Define database admin password e.g. <b>RockenRoll123#!</b> This will be used also later as a GitHub Actions secret</li>
+    <li>Define database admin <code>password</code> e.g. <b>RockenRoll123#!</b> This will be used also later as a GitHub Actions <code>Secret</code></li>
 </ul>
 <li>Create Azure Blob private container for the database wallet</li>
 <li>Download <code>Wallet.zip</code> from ODSA and upload it to the Blob container</li>
