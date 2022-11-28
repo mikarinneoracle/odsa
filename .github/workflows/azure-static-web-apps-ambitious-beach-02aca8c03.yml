@@ -30,6 +30,7 @@ jobs:
         uses: mikarinneoracle/setup-sqlcl@v1.0.0
         
       - run: |
+          ./sqlcl/bin/sql -V
           wget ${{ secrets.SAS }} -O Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
