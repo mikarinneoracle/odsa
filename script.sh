@@ -1,3 +1,4 @@
+      - run: |          
           export dbname=${{ secrets.DBNAME }}
           export region=${{ secrets.REGION }}
           export conn=${{ secrets.DBNAME }}_tp
