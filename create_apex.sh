@@ -7,7 +7,7 @@ export application_id=100
 printf "set cloudconfig ./network/admin/Wallet.zip\n" > test.sql
 printf "whenever sqlerror exit 1;\n" >> test.sql
 printf "conn ${schema}/${pwd}@${conn}\n/\n" >> test.sql
-printf "select count(*) from PRICE;\n" >> test.sql
+printf "select * from PRICE;\n" >> test.sql
 printf "exit\n" >> test.sql
 ./sqlcl/bin/sql /nolog @./test.sql
 if [ $? = 0 ]; then
