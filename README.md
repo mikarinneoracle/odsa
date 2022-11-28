@@ -47,4 +47,4 @@ Special thanks to my colleague @Christophe Pruvost for his <a href="https://gith
 
 ### See on Youtube
 
-<a href="https://www.youtube.com/watch?v=w7b_Jx7CvT4" target="YT">https://www.youtube.com/watch?v=w7b_Jx7CvT4</a>
+<a href="https://www.youtube.com/watch?v=w7b_Jx7CvT4" target="_NEW">https://www.youtube.com/watch?v=w7b_Jx7CvT4</a>
