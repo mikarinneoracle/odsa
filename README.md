@@ -16,13 +16,14 @@
 </ul>
 <li>Create Azure Blob private container for the database wallet</li>
 <li>Download <code>Wallet.zip</code> from ODSA and upload it to the Blob container</li>
-<li>Create SAS for the Wallet.zip</li>
+<li>Create <code>SAS</code> for the Wallet.zip in the private container</li>
 <li>Fork this repo to your GitHub</li>
 <li>Create the following GitBub Actions <code>Secrets</code> to the repo</li>
 <ul>
     <li><code>DBNAME</code> Database name e.g. <b>pricing</b></li>
     <li><code>REGION</code> Corresponding OCI region e.g. <b>uk-london-1</b> that you used for Azure earlier</li>
     <li><code>PASSWORD</code> Database admin password that you used earlier e.g. <b>RockenRoll123#!</b></li>
+    <li><code>SAS</code> Wallet.zip Azure Blob access that you created earlier e.g. <i>https://pricing.blob.core.windows.net/wallet-private/Wallet.zip?sp=r&st=2022-11-26T08:23:00Z&se=2023-11-26T16:23:00Z&spr=https&sv=2021-06-08&sr=b&sig=W4kL6mb.........R7jcUc%3D</i></li>
 </ul>
 <li>Create Azure Static Web VueJS app from GitHub</li>
 </ul>
