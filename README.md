@@ -8,16 +8,21 @@
 ### Steps to complete
     
 <ul>
-<li>Create Azure ODSA Autonomous Database, select <code>BYOL</code> or <code>License included</code> as billing model and cloud <code>region</code> e.g. UK-South</li>
+<li>Create Azure ODSA Autonomous Database, with following options:
+<ul>
+    <li>Select <code>BYOL</code> or <code>License included</code> as billing model depending on your case</li>
+    <li>Use suitable Azure cloud <code>region</code> e.g. UK-South</li>
+    <li>Define database admin password e.g. <b>RockenRoll123#!</b> This will be used also later as a GitHub Actions secret</li>
+</ul>
 <li>Create Azure Blob private container for the database wallet</li>
 <li>Download <code>Wallet.zip</code> from ODSA and upload it to the Blob container</li>
 <li>Create SAS for the Wallet.zip</li>
 <li>Fork this repo to your GitHub</li>
-    <li>Create the following GitBub Actions <code>Secrets</code> to the repo</li>
+<li>Create the following GitBub Actions <code>Secrets</code> to the repo</li>
 <ul>
     <li><code>DBNAME</code> Database name e.g. <b>pricing</b></li>
-    <li><code>REGION</code> Corresponding OCI region e.g. <b>uk-london-1</b></li>
-    <li><code>PASSWORD</code> Database admin password e.g. <b>RockenRoll123#!</b></li>
+    <li><code>REGION</code> Corresponding OCI region e.g. <b>uk-london-1</b> that you used for Azure earlier</li>
+    <li><code>PASSWORD</code> Database admin password that you used earlier e.g. <b>RockenRoll123#!</b></li>
 </ul>
 <li>Create Azure Static Web VueJS app from GitHub</li>
 </ul>
