@@ -5,7 +5,6 @@
 <p>
 <img src="ODSA-Sattic-web-app.png" width="800" />
 
-<p>
 ### Steps to complete
     
 <ul>
