@@ -31,7 +31,8 @@
 </ul>
 
 <p>
-GitHub Azure actions will automatically build and deploy (CI/CD) the Azure Static Web app from gitHub source.
+After committing the <code>workflow yaml</code> change GitHub Azure actions will automatically build and deploy (CI/CD) the Azure Static Web app from gitHub source.
+<br>
 Part of the CI/CD is the Liquibase that will create ODSA <code>PRICEADMIN</code>Schema, add data to it, 
 then create ORDS REST services and finally create the APEX sample app for administration.
 
@@ -42,10 +43,5 @@ Access <i>Azure Static Web</i> from your browser.
 Access APEX "price admin" application from the <i>Admin</i> -link on the page.
 APEX <b>user</b> is <code>priceadmin</code> and <b>password</b> is the one created earlier as sercret i.e. <code>RockenRoll123#!</code>
 Edit prices and options and then save and reload the Static Web app html page.
-
-<p>
-You can test the CI/CD making changes to the Azure Static Web app by making a change to the 
-<code>html/index.html</code> source in the repo and then committing and pushing that chance.
-GitHub Azure Actions should then automatically build and deploy a new version of the app. 
 
 ### See on Youtube
