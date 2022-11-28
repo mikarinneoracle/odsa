@@ -44,7 +44,7 @@ jobs:
           cd html
           sed -i "s|ORDS_URL|${ords}|g" vue.js
           sed -i "s|APEX_URL|${apex}|g" vue.js
-          head -n 4 vue.js
+          
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
