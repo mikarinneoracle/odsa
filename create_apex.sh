@@ -1,6 +1,6 @@
 #!/bin/bash
 
-conn=${dbname}_tp
+conn=pricing_tp
 schema=PRICEADMIN
 wsname=PRICEADMIN
 application_id=100
