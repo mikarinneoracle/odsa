@@ -35,7 +35,7 @@ jobs:
           wget ${{ secrets.SAS }} -O Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
-          sh create_apex.sh
+          sh create_apex.sh ${{ secrets.DBNAME }} {{ secrets.PASSWORD }} 
           cd network/admin
           unzip -q Wallet.zip
           export apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${{ secrets.DBNAME }}.adb.${{ secrets.REGION }}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
