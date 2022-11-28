@@ -3,7 +3,7 @@
 ### Deploying single page app to Azure Static Web using Oracle Databases for Azure (ODSA) and GitHub actions
 
 <p>
-<img src="ODSA-Sattic-web-app.png" width="800" />
+<img src="ODSA-Satic-web-app.png" width="800" />
 
 ### Steps to complete
     
