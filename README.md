@@ -17,7 +17,7 @@
 <li>Create Azure Blob private container for the database wallet</li>
 <li>Download <code>Wallet.zip</code> from ODSA and upload it to the Blob container</li>
 <li>Create <code>SAS</code> for the Wallet.zip in the private container</li>
-<li>Fork this repo to your GitHub</li>
+<li>Fork or copy the contents of this repo to your GitHub</li>
 <li>Create the following GitBub Actions <code>Secrets</code> to the repo</li>
 <ul>
     <li><code>DBNAME</code> Database name e.g. <b>pricing</b></li>
