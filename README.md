@@ -25,7 +25,7 @@
     <li><code>PASSWORD</code> Database admin password that you used earlier e.g. <b>RockenRoll123#!</b></li>
     <li><code>SAS</code> Wallet.zip Azure Blob access that you created earlier in parenthesis e.g. <pre>"https://pricing.blob.core.windows.net/wallet-private/Wallet.zip?sp=r&st=2022-11-26T08:23:00Z&se=2023-11-26T16:23:00Z&spr=https&sv=2021-06-08&sr=b&sig=W4kL6mb.........R7jcUc%3D"</pre></li>
 </ul>
-<li>Create Azure Static Web VueJS app from GitHub</li>
+    <li>Create Azure Static Web app of type <code>VueJS</code> from your GitHub repo and specify <code>app location: /html</code> in the <code>Build details</code></li>
 </ul>
 
 <p>
