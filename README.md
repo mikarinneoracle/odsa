@@ -46,3 +46,5 @@ Edit prices and options and then save and reload the Static Web app html page.
 Special thanks to my colleague @Christophe Pruvost for his <a href="https://github.com/cpruvost/setup-sqlcl">SQLCli action</a>
 
 ### See on Youtube
+
+    <a href="https://www.youtube.com/watch?v=w7b_Jx7CvT4" target="YT">https://www.youtube.com/watch?v=w7b_Jx7CvT4</a>
