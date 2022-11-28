@@ -34,7 +34,7 @@ jobs:
           wget ${{ secrets.SAS }} -O Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
-          export dbname=${{ secrets.DBNAME }}
+          export conn=${{ secrets.DBNAME }}_tp
           export pwd=${{ secrets.PASSWORD }}
           sh create_apex.sh
           cd network/admin
