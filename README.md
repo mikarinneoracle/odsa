@@ -8,7 +8,7 @@
 ### Steps to complete
     
 <ul>
-<li>Create Azure ODSA Autonomous Database, with following options:
+<li>Create Azure ODSA Autonomous Database with following options:
 <ul>
     <li>Select <code>BYOL</code> or <code>License included</code> as billing model depending on your case</li>
     <li>Use suitable Azure cloud <code>region</code> e.g. UK-South</li>
