@@ -1,6 +1,6 @@
 ## Instructions
 
-### Deploying single page app to Azure Static Web using Oracle Databases for Azure (ODSA) and GitHub actions
+### Deploying single page app to Azure Static Web using Oracle Database Service for Azure (ODSA) and GitHub actions
 
 <p>
 <img src="ODSA-Satic-web-app.png" width="800" />
@@ -43,6 +43,6 @@ Access APEX "price admin" application from the <i>Admin</i> -link on the page.
 APEX <b>user</b> is <code>priceadmin</code> and <b>password</b> is the one created earlier as sercret i.e. <code>RockenRoll123#!</code>
 Edit prices and options and then save and reload the Static Web app html page.
 
-Special thanks to my colleague @Christophe Pruvost for letting me using his <a href="https://github.com/cpruvost/setup-sqlcl">SQLCli action</a>
+Special thanks to my colleague @Christophe Pruvost for his <a href="https://github.com/cpruvost/setup-sqlcl">SQLCli action</a>
 
 ### See on Youtube
