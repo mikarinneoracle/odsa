@@ -3,6 +3,20 @@
 export schema=PRICEADMIN
 export wsname=PRICEADMIN
 export application_id=100
+
+printf "set cloudconfig ./network/admin/Wallet.zip\n" > test.sql
+printf "whenever sqlerror exit 1;\n" >> test.sql
+printf "conn ${schema}/${pwd}@${conn}\n/\n" >> test.sql
+printf "select count(*) from PRICE;\n" >> test.sql
+printf "exit\n" >> test.sql
+./sqlcl/bin/sql /nolog @./test.sql
+if [ $? = 0 ]; then
+    echo "PRICEDAMIN exists. Exiting SQLCLI / Liquibase ..."
+    exit;
+else
+    echo "PRICEDAMIN does not exist - creating it ... "
+fi
+
 printf "set cloudconfig ./network/admin/Wallet.zip\nconn admin/${pwd}@${conn}\n/\n" > upd.sql
 printf "create user ${schema} identified by \"${pwd}\"\n/\n" >> upd.sql
 printf "GRANT CONNECT, CREATE SESSION, CREATE CLUSTER, CREATE DIMENSION, CREATE INDEXTYPE, CREATE JOB, CREATE MATERIALIZED VIEW, CREATE OPERATOR, CREATE PROCEDURE, CREATE SEQUENCE, CREATE SYNONYM, CREATE TABLE, CREATE TRIGGER, CREATE TYPE, CREATE VIEW to ${schema};\n" >> upd.sql
