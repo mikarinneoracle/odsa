@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export conn=${{ secrets.DBNAME }}_tp
+export pwd=${{ secrets.PASSWORD }}
 export schema=PRICEADMIN
 export wsname=PRICEADMIN
 export application_id=100
