@@ -12,15 +12,13 @@
           wget ${{ secrets.SAS }} -O Wallet.zip
           mkdir -p ./network/admin
           mv Wallet.zip ./network/admin/
-          export conn=${{ secrets.DBNAME }}_tp
+          export dbname=${{ secrets.DBNAME }}
           export pwd=${{ secrets.PASSWORD }}
           sh create_apex.sh
           cd network/admin
           unzip -q Wallet.zip
-          export apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${{ secrets.DBNAME }}.adb.${{ secrets.REGION }}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
-          export ords=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${{ secrets.DBNAME }}.adb.${{ secrets.REGION }}.oraclecloudapps.com/ords/priceadmin")
-          echo "APEX URL: ${apex}"
-          echo "ORDS URL: ${ords}"
+          apex=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${{ secrets.DBNAME }}.adb.${{ secrets.REGION }}.oraclecloudapps.com/ords/r/priceadmin/price-admin/login")
+          ords=$(grep -oP '(?<=service_name=)[^_]*' tnsnames.ora | echo "https://$(head -n 1)-${{ secrets.DBNAME }}.adb.${{ secrets.REGION }}.oraclecloudapps.com/ords/priceadmin")
           cd ../../
           cd html
           sed -i "s|ORDS_URL|${ords}|g" vue.js

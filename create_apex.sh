@@ -1,8 +1,9 @@
 #!/bin/bash
 
-export schema=PRICEADMIN
-export wsname=PRICEADMIN
-export application_id=100
+conn=${dbname}_tp
+schema=PRICEADMIN
+wsname=PRICEADMIN
+application_id=100
 
 printf "set cloudconfig ./network/admin/Wallet.zip\n" > test.sql
 printf "whenever sqlerror exit 1;\n" >> test.sql
