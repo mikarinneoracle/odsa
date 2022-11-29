@@ -1,7 +1,3 @@
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-
       - name: 'Set up latest Oracle JDK 17'
         uses: oracle-actions/setup-java@v1
         with:
