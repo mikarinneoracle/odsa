@@ -23,7 +23,7 @@
     <li><code>DBNAME</code> Database name e.g. <b>pricing</b></li>
     <li><code>REGION</code> Corresponding OCI region e.g. <b>uk-london-1</b> that you used for Azure earlier. This is just used to create the APEX "price admin" app link on the Azure Static Web app page.</li>
     <li><code>PASSWORD</code> Database admin password that you used earlier e.g. <b>RockenRoll123#!</b></li>
-    <li><code>SAS</code> Wallet.zip Azure Blob access that you created earlier in parenthesis e.g. <pre>"https://pricing.blob.core.windows.net/wallet-private/Wallet.zip?sp=r&st=2022-11-26T08:23:00Z&se=2023-11-26T16:23:00Z&spr=https&sv=2021-06-08&sr=b&sig=W4kL6mb.........R7jcUc%3D"</pre></li>
+    <li><code>SAS</code> Wallet.zip Azure Blob access that you created earlier in quotation marks (") e.g. <pre>"https://pricing.blob.core.windows.net/wallet-private/Wallet.zip?sp=r&st=2022-11-26T08:23:00Z&se=2023-11-26T16:23:00Z&spr=https&sv=2021-06-08&sr=b&sig=W4kL6mb.........R7jcUc%3D"</pre></li>
 </ul>
 <li>Create Azure Static Web app of type <code>VueJS</code> from your GitHub repo and specify <code>app location: /html</code> in the <code>Build details</code></li>
 <li>Add the contents of the <code>github-workflow-run</code> file to the <code>.github/workflows .yaml</code> under line #21 
