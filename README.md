@@ -1,6 +1,6 @@
 ## Instructions
 
-### Deploying single page app to Azure Static Web using Oracle Database Service for Azure (ODSA) and GitHub actions
+### Deploying single page app to Azure Static Web using Oracle Database Service for Azure (ODSA) with REST (ORDS) and GitHub actions
 
 <p>
 <img src="ODSA-Satic-web-app.png" width="800" />
