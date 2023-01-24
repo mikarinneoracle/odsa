@@ -18,7 +18,7 @@
 <li>Download <code>Wallet.zip</code> from ODSA and upload it to the Blob container</li>
 <li>Create <code>SAS</code> for the Wallet.zip in the private container</li>
 <li>Fork or copy the contents of this repo to your GitHub. Make sure <code>.github</code> directory is <b>not copied</b> to repo since it will be created by Azure Static Web during it's creation. <i>When forking, delete this directory after the repo is forked.</i></li>
-<li>Create the following GitBub Actions <code>Secrets</code> to the repo</li>
+<li>Create the following GitHub Actions <code>Secrets</code> to the repo</li>
 <ul>
     <li><code>DBNAME</code> Database name e.g. <b>pricing</b></li>
     <li><code>REGION</code> Corresponding OCI region e.g. <b>uk-london-1</b> that you used for Azure earlier. This is just used to create the APEX "price admin" app link on the Azure Static Web app page.</li>
